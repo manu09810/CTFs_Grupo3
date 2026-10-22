@@ -1,0 +1,1 @@
+INCIDENT REPORT 07-B\n\nA routine cleanup moved several legacy records out of the public index.\nThe backup rotation job was scheduled but may not have completed.\n\nOperations note: check the site's published crawler rules if you need to map public paths.\n

@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Website</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <script>
+        window.FLAG = {{ flag | tojson }};
+    </script>
+</head>
+<body>
+    <main class="panel">
+        <p class="badge">WEB SECURITY</p>
+        <h1>Visitor verification</h1>
+        <p class="muted">
+            El sistema registra el nombre del visitante para generar
+            un saludo personalizado.
+        </p>
+
+        <form action="/" method="GET">
+            <label for="name">Nombre del visitante</label>
+            <input id="name" name="name" placeholder="Ingresá un nombre">
+            <button type="submit">CONTINUAR</button>
+        </form>
+
+        <section class="result">
+            <h2>Resultado</h2>
+            <div id="greeting">Bienvenido: {{ name | safe }}</div>
+        </section>
+
+        <p class="hint">
+            Objetivo: investigá cómo procesa la aplicación tu entrada
+            y encontrá la flag.
+        </p>
+    </main>
+</body>
+</html>
